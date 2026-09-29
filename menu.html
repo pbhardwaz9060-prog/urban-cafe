@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Explore Urban Cafe menu including coffee, pizza, burgers and desserts.">
+
+<title>Menu | Urban Cafe</title>
+
+<link rel="stylesheet" href="css/style.css">
+```
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+```
+<div class="container navbar">
+
+    <a href="index.html" class="logo">
+        Urban<span>Cafe</span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
+
+
+    <nav class="nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <a href="order.html" class="order-btn">
+
+        🛒 Cart
+        <span id="cart-count">0</span>
+
+    </a>
+
+</div>
+```
+
+</header>
+
+<!-- MENU -->
+
+<main>
+
+<section class="menu-section">
+
+```
+<div class="container">
+
+
+    <div class="section-heading">
+
+        <p class="section-subtitle">
+            OUR MENU
+        </p>
+
+        <h1>
+            Choose Your Favorite
+        </h1>
+
+        <p>
+            Freshly prepared food and drinks made for you.
+        </p>
+
+    </div>
+
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="category-buttons">
+
+        <button
+            class="category-btn active"
+            data-category="all">
+            All
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="coffee">
+            Coffee
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="pizza">
+            Pizza
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="burger">
+            Burgers
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="dessert">
+            Desserts
+        </button>
+
+    </div>
+
+
+
+    <!-- PRODUCTS -->
+
+    <div class="menu-grid" id="menu-container">
+
+
+        <!-- Coffee -->
+
+        <article
+            class="menu-card"
+            data-category="coffee">
+
+            <img
+                src="images/coffee.jpg"
+                alt="Cappuccino">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Cappuccino
+                </h3>
+
+                <p>
+                    Smooth espresso with steamed milk.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹149
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Cappuccino"
+                        data-price="149">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="menu-card"
+            data-category="coffee">
+
+            <img
+                src="images/coffee.jpg"
+                alt="Cold Coffee">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Cold Coffee
+                </h3>
+
+                <p>
+                    Chilled creamy coffee with rich flavor.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹169
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Cold Coffee"
+                        data-price="169">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- Pizza -->
+
+        <article
+            class="menu-card"
+            data-category="pizza">
+
+            <img
+                src="images/pizza.jpg"
+                alt="Cheese Pizza">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Cheese Pizza
+                </h3>
+
+                <p>
+                    Crispy crust with melted cheese.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹249
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Cheese Pizza"
+                        data-price="249">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="menu-card"
+            data-category="pizza">
+
+            <img
+                src="images/pizza.jpg"
+                alt="Farmhouse Pizza">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Farmhouse Pizza
+                </h3>
+
+                <p>
+                    Fresh vegetables with cheese and herbs.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹299
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Farmhouse Pizza"
+                        data-price="299">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- Burgers -->
+
+        <article
+            class="menu-card"
+            data-category="burger">
+
+            <img
+                src="images/burger.jpg"
+                alt="Classic Burger">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Classic Burger
+                </h3>
+
+                <p>
+                    Juicy burger with fresh vegetables.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹199
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Classic Burger"
+                        data-price="199">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="menu-card"
+            data-category="burger">
+
+            <img
+                src="images/burger.jpg"
+                alt="Cheese Burger">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Cheese Burger
+                </h3>
+
+                <p>
+                    Classic burger with extra melted cheese.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹229
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Cheese Burger"
+                        data-price="229">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- Desserts -->
+
+        <article
+            class="menu-card"
+            data-category="dessert">
+
+            <img
+                src="images/dessert.jpg"
+                alt="Chocolate Cake">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Chocolate Cake
+                </h3>
+
+                <p>
+                    Soft chocolate cake with creamy topping.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹159
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Chocolate Cake"
+                        data-price="159">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <article
+            class="menu-card"
+            data-category="dessert">
+
+            <img
+                src="images/dessert.jpg"
+                alt="Brownie">
+
+            <div class="menu-card-content">
+
+                <h3>
+                    Chocolate Brownie
+                </h3>
+
+                <p>
+                    Warm chocolate brownie with rich flavor.
+                </p>
+
+                <div class="menu-price">
+
+                    <strong>
+                        ₹129
+                    </strong>
+
+                    <button
+                        class="add-cart"
+                        data-name="Chocolate Brownie"
+                        data-price="129">
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- CART SUMMARY -->
+
+    <div class="cart-summary">
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <div id="cart-items">
+
+            <p>
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <strong>
+                Total:
+            </strong>
+
+            <span id="cart-total">
+                ₹0
+            </span>
+
+        </div>
+
+
+        <button
+            id="clear-cart"
+            class="clear-cart-btn">
+            Clear Cart
+        </button>
+
+
+        <a
+            href="order.html"
+            class="checkout-btn">
+            Proceed to Order
+        </a>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+```
+<div class="container">
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Urban Cafe. All rights reserved.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</footer>
+
+<script src="js/menu.js"></script>
+
+<script src="js/cart.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

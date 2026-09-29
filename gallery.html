@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Urban Cafe</title>
+
+    <meta name="description"
+        content="Explore the Urban Cafe gallery featuring coffee, food and cafe moments.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Cafe</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html" class="active-nav">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="order.html">Order Now</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- GALLERY HERO -->
+
+    <section class="gallery-hero">
+
+        <div class="container">
+
+            <p class="section-tag">
+                OUR GALLERY
+            </p>
+
+            <h1>
+                Moments at Urban Cafe
+            </h1>
+
+            <p>
+                A glimpse of our coffee, food and cozy cafe experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section">
+
+        <div class="container">
+
+            <!-- FILTER BUTTONS -->
+
+            <div class="gallery-filters">
+
+                <button class="gallery-filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="gallery-filter" data-filter="coffee">
+                    Coffee
+                </button>
+
+                <button class="gallery-filter" data-filter="food">
+                    Food
+                </button>
+
+                <button class="gallery-filter" data-filter="cafe">
+                    Cafe
+                </button>
+
+            </div>
+
+
+            <!-- IMAGE GRID -->
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item" data-category="coffee">
+
+                    <img
+                        src="images/coffee.jpg"
+                        alt="Fresh coffee at Urban Cafe"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Fresh Coffee</h3>
+                        <p>Freshly brewed every day</p>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item" data-category="food">
+
+                    <img
+                        src="images/burger.jpg"
+                        alt="Classic burger"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Classic Burger</h3>
+                        <p>Fresh and delicious</p>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item" data-category="food">
+
+                    <img
+                        src="images/pizza.jpg"
+                        alt="Cheese pizza"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Cheese Pizza</h3>
+                        <p>Hot and cheesy</p>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item" data-category="cafe">
+
+                    <img
+                        src="images/about-cafe.jpg"
+                        alt="Urban Cafe interior"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Our Cafe</h3>
+                        <p>A cozy place to relax</p>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item" data-category="coffee">
+
+                    <img
+                        src="images/coffee.jpg"
+                        alt="Cappuccino"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Cappuccino</h3>
+                        <p>Rich and creamy</p>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item" data-category="food">
+
+                    <img
+                        src="images/dessert.jpg"
+                        alt="Chocolate dessert"
+                    >
+
+                    <div class="gallery-overlay">
+                        <h3>Chocolate Dessert</h3>
+                        <p>Perfect for sweet lovers</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <h2>
+                Hungry Yet?
+            </h2>
+
+            <p>
+                Explore our menu and order your favorite food.
+            </p>
+
+            <a href="menu.html" class="btn primary-btn">
+                Explore Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>UrbanCafe</h3>
+
+            <p>
+                Fresh coffee, delicious food and great moments.
+            </p>
+
+            <p>
+                © 2026 Urban Cafe. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- GALLERY JAVASCRIPT -->
+
+    <script>
+
+        const filterButtons =
+            document.querySelectorAll(".gallery-filter");
+
+        const galleryItems =
+            document.querySelectorAll(".gallery-item");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const filter =
+                    button.dataset.filter;
+
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+
+                galleryItems.forEach(item => {
+
+                    const category =
+                        item.dataset.category;
+
+
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
+
+                        item.style.display = "block";
+
+                    } else {
+
+                        item.style.display = "none";
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Online | Urban Cafe</title>
+    <meta name="description" content="Order your favorite food and coffee from Urban Cafe.">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">Urban<span>Cafe</span></a>
+
+        <button class="menu-toggle" id="menu-toggle">
+    ☰
+</button>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="order.html" class="active-nav">Order Now</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="order-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="section-tag">ORDER ONLINE</p>
+            <h1>Place Your Order</h1>
+            <p>Fill in your details and order your favorite food.</p>
+        </div>
+
+
+        <div class="order-layout">
+
+            <!-- Customer Details -->
+
+            <div class="order-form-box">
+
+                <h2>Customer Details</h2>
+
+                <form id="order-form">
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name</label>
+                        <input 
+                            type="text"
+                            id="customer-name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number</label>
+                        <input 
+                            type="tel"
+                            id="customer-phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="customer-address">Delivery Address</label>
+                        <textarea 
+                            id="customer-address"
+                            rows="4"
+                            placeholder="Enter your complete address"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method</label>
+
+                        <select id="payment-method">
+
+                            <option value="Cash on Delivery">
+                                Cash on Delivery
+                            </option>
+
+                            <option value="UPI">
+                                UPI
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="btn primary-btn">
+                        Place Order on WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Order Summary -->
+
+            <div class="order-summary">
+
+                <h2>Your Order</h2>
+
+                <div id="order-items">
+                    <!-- Cart items will appear here -->
+                </div>
+
+                <div class="order-total">
+                    <span>Total</span>
+                    <strong>₹<span id="order-total">0</span></strong>
+                </div>
+
+                <a href="menu.html" class="btn secondary-btn">
+                    ← Continue Shopping
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <h3>UrbanCafe</h3>
+
+        <p>
+            Fresh coffee, delicious food and great moments.
+        </p>
+
+        <p>
+            © 2026 Urban Cafe. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/cart.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cart = JSON.parse(localStorage.getItem("urbanCafeCart")) || [];
+
+    const orderItems = document.getElementById("order-items");
+    const orderTotal = document.getElementById("order-total");
+
+    let total = 0;
+
+    if (cart.length === 0) {
+
+        orderItems.innerHTML = `
+            <p class="empty-order">
+                Your cart is empty.
+            </p>
+        `;
+
+    } else {
+
+        cart.forEach(item => {
+
+            const itemTotal = item.price * item.quantity;
+
+            total += itemTotal;
+
+            const div = document.createElement("div");
+
+            div.classList.add("order-item");
+
+            div.innerHTML = `
+                <div>
+                    <strong>${item.name}</strong>
+                    <p>₹${item.price} × ${item.quantity}</p>
+                </div>
+
+                <strong>₹${itemTotal}</strong>
+            `;
+
+            orderItems.appendChild(div);
+
+        });
+
+    }
+
+    orderTotal.textContent = total;
+
+
+    document.getElementById("order-form").addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        if (cart.length === 0) {
+
+            alert("Your cart is empty. Please add items first.");
+
+            return;
+
+        }
+
+
+        const name =
+            document.getElementById("customer-name").value;
+
+        const phone =
+            document.getElementById("customer-phone").value;
+
+        const address =
+            document.getElementById("customer-address").value;
+
+        const payment =
+            document.getElementById("payment-method").value;
+
+
+        let message = `Hello Urban Cafe!%0A%0A`;
+
+        message += `*New Order*%0A%0A`;
+
+        message += `Name: ${name}%0A`;
+
+        message += `Phone: ${phone}%0A`;
+
+        message += `Address: ${address}%0A`;
+
+        message += `Payment: ${payment}%0A%0A`;
+
+        message += `*Order Details:*%0A`;
+
+
+        cart.forEach(item => {
+
+            message += `${item.name} × ${item.quantity} = ₹${item.price * item.quantity}%0A`;
+
+        });
+
+
+        message += `%0A*Total: ₹${total}*`;
+
+
+        // Replace this number with the cafe's WhatsApp number
+        const whatsappNumber = "919999999999";
+
+
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${message}`;
+
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+});
+
+</script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
