@@ -41,6 +41,7 @@ if (menuToggle && mainNav) {
 // BACK TO TOP BUTTON
 // =========================
 
+
 const backToTop =
     document.getElementById("back-to-top");
 
