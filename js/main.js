@@ -112,3 +112,23 @@ window.addEventListener(
 
 revealOnScroll();
 
+// =========================
+// SCROLL REVEAL
+// =========================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < window.innerHeight - 100) {
+            element.classList.add("active");
+        }
+    });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
