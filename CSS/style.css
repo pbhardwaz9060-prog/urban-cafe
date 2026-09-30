@@ -1955,3 +1955,118 @@ html {
 .add-to-cart:hover {
     transform: translateY(-2px);
 }
+
+/* =========================
+   FINAL RESPONSIVE POLISH
+========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+        margin: auto;
+    }
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .order-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.15;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .cta-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .about-content h2,
+    .mission-box h2 {
+        font-size: 28px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
