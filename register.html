@@ -1,0 +1,208 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Urban Cafe</title>
+
+    <meta name="description"
+        content="Create your Urban Cafe customer account and enjoy a better ordering experience.">
+
+    <link rel="icon" type="image/png" href="images/cafe-icon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Urban<span>Cafe</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+
+            <nav class="nav" id="main-nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="menu.html">Menu</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <a href="order.html" class="order-btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- REGISTER SECTION -->
+
+    <section class="auth-section">
+
+        <div class="auth-card">
+
+            <p class="section-tag">
+                URBAN CAFE
+            </p>
+
+            <h1>
+                Create Account
+            </h1>
+
+            <p class="auth-subtitle">
+                Create your account and enjoy a better ordering experience.
+            </p>
+
+
+            <form id="register-form">
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn primary-btn auth-btn"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- MESSAGE -->
+
+            <p
+                id="register-message"
+                class="auth-message"
+            ></p>
+
+
+            <!-- LOGIN LINK -->
+
+            <p class="auth-footer">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>
+                UrbanCafe
+            </h3>
+
+            <p>
+                Fresh coffee, delicious food and great moments.
+            </p>
+
+            <p>
+                © 2026 Urban Cafe. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Cafe - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            ☕ Urban Cafe
+        </div>
+
+        <nav>
+            <a href="#" class="active">📊 Dashboard</a>
+            <a href="#">🍔 Menu</a>
+            <a href="#">🛒 Orders</a>
+            <a href="#">👥 Customers</a>
+            <a href="#">📦 Reservations</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">
+            🚪 Logout
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome back, Admin 👋</p>
+            </div>
+
+            <div class="admin-profile">
+                👤 <span id="adminName">Admin</span>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">🛒</div>
+                <div>
+                    <h3>125</h3>
+                    <p>Total Orders</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div>
+                    <h3>₹45,850</h3>
+                    <p>Total Revenue</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <h3>86</h3>
+                    <p>Customers</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div>
+                    <h3>18</h3>
+                    <p>Reservations</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recent Orders -->
+        <section class="dashboard-card">
+
+            <div class="section-header">
+                <h2>Recent Orders</h2>
+                <button class="view-btn">View All</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Item</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#UC001</td>
+                            <td>Rahul</td>
+                            <td>Cappuccino</td>
+                            <td>₹180</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#UC002</td>
+                            <td>Priya</td>
+                            <td>Veg Burger</td>
+                            <td>₹250</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#UC003</td>
+                            <td>Amit</td>
+                            <td>Pizza</td>
+                            <td>₹399</td>
+                            <td><span class="status preparing">Preparing</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#UC004</td>
+                            <td>Neha</td>
+                            <td>Cold Coffee</td>
+                            <td>₹150</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

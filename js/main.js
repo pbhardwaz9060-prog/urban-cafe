@@ -76,3 +76,44 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 
 revealOnScroll();
+
+// =========================
+// CUSTOMER AUTH NAVBAR
+// =========================
+
+const currentUser = localStorage.getItem("urbanCafeUser");
+
+
+if (currentUser && mainNav) {
+
+    const user = JSON.parse(currentUser);
+
+    const authLink = document.createElement("a");
+
+    authLink.href = "#";
+    authLink.textContent = `Hi, ${user.name} 👋`;
+
+    authLink.classList.add("user-greeting");
+
+    mainNav.appendChild(authLink);
+
+
+    const logoutLink = document.createElement("a");
+
+    logoutLink.href = "#";
+    logoutLink.textContent = "Logout";
+
+    logoutLink.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+        localStorage.removeItem("urbanCafeToken");
+        localStorage.removeItem("urbanCafeUser");
+
+        window.location.href = "index.html";
+
+    });
+
+    mainNav.appendChild(logoutLink);
+
+}
